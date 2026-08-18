@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e-POWERモニター APK配布</title>
+<style>
+  body { font-family: sans-serif; max-width: 640px; margin: 2em auto; padding: 0 1em; line-height: 1.8; }
+  .btn { display: block; background: #2563eb; color: #fff; text-decoration: none; text-align: center;
+         padding: 1em; border-radius: 12px; font-size: 1.2em; margin: 1.5em 0; }
+  code { background: #eee; padding: 0.1em 0.4em; border-radius: 4px; }
+  .note { color: #555; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1>e-POWERモニター</h1>
+<p>セレナ e-POWER C28 の Android Auto 画面に速度・バッテリー残量を自前描画するアプリ（開発版）。</p>
+
+<a class="btn" href="epower-monitor-debug.apk">APK をダウンロード（v0.1 debug）</a>
+
+<h2>Pixel 7 でのインストール手順</h2>
+<ol>
+  <li>このページを Pixel 7 の Chrome で開き、上のボタンで APK をダウンロードする。</li>
+  <li>ダウンロード通知から APK を開く。「不明なアプリのインストール」を求められたら Chrome（またはファイル）に許可を与える。</li>
+  <li>インストールを実行する。ホーム画面にアイコンは出ない（車の画面専用アプリのため）。</li>
+</ol>
+
+<h2>Android Auto 側の準備（初回のみ）</h2>
+<ol>
+  <li>設定 → デバイス情報 → <b>ビルド番号を7回タップ</b>（開発者向けオプションの有効化）。</li>
+  <li>設定 → アプリ → Android Auto → 「追加の設定」で Android Auto の設定画面を開く。</li>
+  <li>最下部の<b>「バージョンと権限情報」を10回タップ</b>して開発者モードを解錠する。</li>
+  <li>右上メニュー → 開発者向け設定 → <b>「不明なソース」を有効化</b>する。</li>
+</ol>
+<p>この状態で車に接続すると、車の画面のアプリ一覧に「e-POWERモニター」が現れる。</p>
+
+<p class="note">ソースコード: <a href="https://github.com/qurihara/serena-epower-monitor">github.com/qurihara/serena-epower-monitor</a></p>
+</body>
+</html>
