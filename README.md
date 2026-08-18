@@ -29,7 +29,19 @@ APK は `/Users/kurihara/serena-epower-monitor/app/build/outputs/apk/debug/app-d
 
 ## Pixel 7 へのインストール
 
-Pixel 7 で USB デバッグを有効にして Mac に接続し、次を実行する。
+### 方法1: 配布ページからダウンロード（Macに接続できない場所でも可）
+
+Pixel 7 の Chrome で https://unryu.org/serena-epower-monitor/ を開き、APK をダウンロードしてインストールする。
+手順の詳細は配布ページに書いてある。APK を更新したときは、次を実行して配布ページに反映する。
+
+```bash
+cd /Users/kurihara/serena-epower-monitor
+JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradlew :app:assembleDebug
+cp app/build/outputs/apk/debug/app-debug.apk docs/epower-monitor-debug.apk
+git add -A && git commit -m "APK更新" && git push
+```
+
+### 方法2: adb でインストール（Pixel 7 を USB 接続できる Mac で）
 
 ```bash
 /Users/kurihara/Library/Android/sdk/platform-tools/adb install -r /Users/kurihara/serena-epower-monitor/app/build/outputs/apk/debug/app-debug.apk
